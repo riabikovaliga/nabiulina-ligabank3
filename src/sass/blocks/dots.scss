@@ -1,0 +1,35 @@
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+}
+
+.dots__item {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: $dot;
+  border-radius: 50%;
+  transition: all 0.7s;
+
+  &--active {
+    background-color: $dot-active;
+  }
+
+  &--active-light {
+    background-color: $background;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+
+  .dots__item  {
+    width: 6px;
+    height: 6px;
+  }
+}

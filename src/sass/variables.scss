@@ -1,0 +1,36 @@
+// viewport
+
+$mobile-width: 320px;
+$max-mobile-width: 767px;
+$tablet-width: 768px;
+$max-tablet-width: 1023px;
+$desktop-width: 1024px;
+$max-content-width: 1366px;
+
+// retina
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// colors
+
+$main-background: #FFFFFF;
+$main-text: #1F1E25;
+$background: #F6F7FF;
+$button: #2C36F2;
+$dot: #2028B6;
+$dot-active: #E0E0E0;
+$subtitle-light: #E0E1EA;
+$subtitle-dark: #2B3C4F;
+$pale-text: #707C87;
+$input-text: #000000;
+$label-text: #394959;
+$border: #C1C2CA;
+$pale-border: #C4C4C4;
+$shadow: rgba(#000000, .2);
+$error: red;
+
+// fonts
+
+$medium: 500;
+$bold: 700;

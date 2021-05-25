@@ -1,0 +1,29 @@
+.container {
+  box-sizing: border-box;
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
+.container__wrapper {
+  padding: 0 7.2%;
+}
+
+@media (max-width: $max-tablet-width) {
+  .container {
+    max-width: $max-tablet-width;
+  }
+
+  .container__wrapper {
+    padding: 0 5.85%;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .container {
+    max-width: $max-mobile-width;
+  }
+
+  .container__wrapper {
+    padding: 0 4.65%;
+  }
+}

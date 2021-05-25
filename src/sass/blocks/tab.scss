@@ -1,0 +1,415 @@
+.tab {
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 53px;
+  padding-bottom: 60px;
+  padding-left: 70px;
+  background-color: $background;
+  z-index: 1;
+
+  &::after {
+    position: absolute;
+    content: "";
+    right: 11.5%;
+    width: 440px;
+    height: 290px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    z-index: -1;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 440px auto;
+    }
+  }
+
+  &--deposits::after {
+    top: 60px;
+  }
+
+  &--deposits.tab--no-webp::after {
+    background-image: url("../../img/desktop_tab_1.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_1@2x.jpg");
+    }
+  }
+
+  &--deposits.tab--webp::after {
+    background-image: url("../../img/desktop_tab_1.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_1@2x.webp");
+    }
+  }
+
+  &--credits::after {
+    top: 55px;
+  }
+
+  &--credits.tab--no-webp::after {
+    background-image: url("../../img/desktop_tab_2.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_2@2x.jpg");
+    }
+  }
+
+  &--credits.tab--webp::after {
+    background-image: url("../../img/desktop_tab_2.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_2@2x.webp");
+    }
+  }
+
+  &--insurance::after {
+    top: 48px;
+  }
+
+  &--insurance.tab--no-webp::after  {
+    background-image: url("../../img/desktop_tab_3.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_3@2x.jpg");
+    }
+  }
+
+  &--insurance.tab--webp::after {
+    background-image: url("../../img/desktop_tab_3.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_3@2x.webp");
+    }
+  }
+
+  &--online::after {
+    top: 53px;
+  }
+
+  &--online.tab--no-webp::after {
+    background-image: url("../../img/desktop_tab_4.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_4@2x.jpg");
+    }
+  }
+
+  &--online.tab--webp::after {
+    background-image: url("../../img/desktop_tab_4.webp");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../../img/desktop_tab_4@2x.webp");
+    }
+  }
+}
+
+.tab__wrapper {
+  max-width: 410px;
+  white-space: pre-line;
+}
+
+.tab--credits .tab__wrapper,
+.tab--insurance .tab__wrapper {
+  max-width: 350px;
+}
+
+.tab__title {
+  @include indents-none;
+  @include font-weight($medium);
+  font-size: 22px;
+  line-height: 31px;
+}
+
+.tab__subtitle {
+  @include indents-none;
+  margin-top: 29px;
+  margin-bottom: -6px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.tab__link {
+  @include font-weight($medium);
+  text-decoration: underline;
+}
+
+.tab__features {
+  @include indents-none;
+  @include list-reset;
+  padding-top: 27px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.tab__features-item {
+  position: relative;
+  padding-left: 21px;
+  margin-bottom: 15px;
+}
+
+.tab__button {
+  width: 198px;
+  min-height: 51px;
+  margin-top: 35px;
+  padding-top: 17px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: $max-tablet-width) {
+
+  .tab {
+    min-height: 380px;
+    padding-left: 0;
+    padding-top: 54px;
+
+    &::after {
+      top: 60px;
+      right: 0;
+      width: 289px;
+      height: 260px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-size: 289px auto;
+      }
+    }
+
+    &--deposits.tab--no-webp::after {
+      background-image: url("../../img/tablet_tab_1.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/tablet_tab_1@2x.jpg");
+      }
+    }
+
+    &--deposits.tab--webp::after {
+      background-image: url("../../img/tablet_tab_1.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/tablet_tab_1@2x.webp");
+      }
+    }
+
+    &--credits.tab--no-webp::after {
+      background-image: url("../../img/tablet_tab_2.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/tablet_tab_2@2x.jpg");
+      }
+    }
+
+    &--credits.tab--webp::after {
+      background-image: url("../../img/tablet_tab_2.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/tablet_tab_2@2x.webp");
+      }
+    }
+
+    &--insurance.tab--no-webp::after {
+      background-image: url("../../img/tablet_tab_3.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/tablet_tab_3@2x.jpg");
+      }
+    }
+
+    &--insurance.tab--webp::after {
+      background-image: url("../../img/tablet_tab_3.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/tablet_tab_3@2x.webp");
+      }
+    }
+
+    &--online.tab--no-webp::after {
+      background-image: url("../../img/tablet_tab_4.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/tablet_tab_4@2x.jpg");
+      }
+    }
+
+    &--online.tab--webp::after {
+      background-image: url("../../img/tablet_tab_4.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/tablet_tab_4@2x.webp");
+      }
+    }
+  }
+
+  .tab__wrapper {
+    max-width: 351px;
+  }
+
+  .tab--insurance .tab__wrapper {
+    max-width: 280px;
+  }
+
+  .tab__title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .tab__subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .tab__features {
+    padding-top: 24px;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  .tab__button {
+    min-height: 48px;
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 13px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+
+  .tab {
+    min-height: 362px;
+    padding-top: 55px;
+    padding-bottom: 50px;
+
+    &::after {
+      top: 98px;
+      right: -5%;
+      width: 87px;
+      height: 113px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-size: 87px auto;
+      }
+    }
+
+    &--deposits.tab--no-webp::after {
+      background-image: url("../../img/mobile_tab_1.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/mobile_tab_1@2x.jpg");
+      }
+    }
+
+    &--deposits.tab--webp::after {
+      background-image: url("../../img/mobile_tab_1.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/mobile_tab_1@2x.webp");
+      }
+    }
+
+    &--credits.tab--no-webp::after {
+      background-image: url("../../img/mobile_tab_2.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/mobile_tab_2@2x.jpg");
+      }
+    }
+
+    &--credits.tab--webp::after {
+      background-image: url("../../img/mobile_tab_2.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/mobile_tab_2@2x.webp");
+      }
+    }
+
+    &--insurance.tab--no-webp::after {
+      background-image: url("../../img/mobile_tab_3.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/mobile_tab_3@2x.jpg");
+      }
+    }
+
+    &--insurance.tab--webp::after {
+      background-image: url("../../img/mobile_tab_3.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/mobile_tab_3@2x.webp");
+      }
+    }
+
+    &--online.tab--no-webp::after {
+      background-image: url("../../img/mobile_tab_4.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../../img/mobile_tab_4@2x.jpg");
+      }
+    }
+
+    &--online.tab--webp::after {
+      background-image: url("../../img/mobile_tab_4.webp");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/mobile_tab_4@2x.webp");
+      }
+    }
+  }
+
+  .tab__wrapper {
+    max-width: 270px;
+   }
+
+  .tab--insurance .tab__wrapper {
+    max-width: 246px;
+   }
+
+  .tab--online .tab__wrapper {
+    max-width: 224px;
+    white-space: normal;
+  }
+
+  .tab--online .tab__features-item {
+    &:first-child {
+      max-width: 174px;
+    }
+  }
+
+  .tab__title {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .tab__subtitle {
+    margin-top: 22px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .tab--deposits .tab__features {
+   max-width: 230px;
+  }
+
+  .tab__features {
+    padding-top: 21px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .tab__features-item {
+    padding-left: 15px;
+    margin-bottom: 12px;
+  }
+
+  .tab__features-item svg {
+    width: auto;
+    height: 8px;
+  }
+
+  .tab__button {
+    width: 290px;
+    min-height: 43px;
+    margin-top: 25px;
+    padding-top: 14px;
+    padding-bottom: 11px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

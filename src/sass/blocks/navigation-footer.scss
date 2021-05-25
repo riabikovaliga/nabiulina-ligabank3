@@ -1,0 +1,32 @@
+.navigation-footer {
+  padding-top: 2px;
+  padding-left: 1px;
+}
+
+.navigation-footer__link {
+  @include font-weight($medium);
+  display: block;
+  padding: 4.5px 0;
+  line-height: 22px;
+
+  &:hover,
+  &:focus {
+    color: $button;
+  }
+}
+
+@media (max-width: $max-tablet-width) {
+
+  .navigation-footer {
+    padding: 0;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+
+  .navigation-footer__link {
+    padding: 4.5px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

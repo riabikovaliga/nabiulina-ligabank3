@@ -1,0 +1,102 @@
+.icon {
+  position: absolute;
+  pointer-events: none;
+
+  &--deposits {
+    top: -6px;
+    left: 0;
+  }
+
+  &--credits {
+    top: -5px;
+    left: 0;
+  }
+
+  &--insurance {
+    top: -7px;
+    left: 0;
+  }
+
+  &--online {
+    top: -7px;
+    left: 0;
+  }
+
+  &--tick {
+    top: 6px;
+    left: -1px;
+  }
+
+  &--login {
+    top: 8px;
+    left: 0;
+  }
+
+  &--password {
+    top: 11px;
+    left: 4px;
+  }
+
+  &--close {
+    top: 0;
+    left: 0;
+  }
+
+  &--select {
+    top: 24px;
+    right: 22px;
+    transition: all 0.3s;
+  }
+
+  &--mobile-phone{
+    top: 1px;
+    left: -29px;
+  }
+
+  &--phone  {
+    top: 2px;
+    left: -33px;
+  }
+
+  &--facebook,
+  &--twitter,
+  &--instagram,
+  &--youtube {
+    top: 0;
+    left: 0;
+  }
+}
+
+@media (max-width: $max-tablet-width) {
+
+  .icon {
+
+    &--login {
+      top: -2px;
+    }
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+
+  .icon {
+
+    &--close-mobile {
+      top: 0;
+      left: -1px;
+    }
+
+    &--login {
+      top: 18px;
+      left: 15px;
+    }
+
+    &--tick {
+      top: 4px;
+    }
+
+    &--select {
+      right: 13px;
+    }
+  }
+}

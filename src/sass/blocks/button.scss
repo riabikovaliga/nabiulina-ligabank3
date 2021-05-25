@@ -1,0 +1,23 @@
+.button {
+  @include font-weight($medium);
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: $background;
+  background-color: $button;
+  border: none;
+  border-radius: 4px;
+
+  &--light {
+    color: $main-text;
+    background-color: $background;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}

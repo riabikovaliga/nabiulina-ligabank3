@@ -1,0 +1,172 @@
+@keyframes fade-in {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $shadow;
+  z-index: 10;
+}
+
+.modal__window {
+  position: relative;
+  box-sizing: border-box;
+  width: 544px;
+  height: 493px;
+  padding: 55px;
+  background-color: $background;
+  border: 4px solid $button;
+
+  &--fade-in {
+    animation: fade-in 0.5s;
+  }
+
+  &--shake {
+    animation: shake 0.5s;
+  }
+
+  &--pop-up {
+    width: 500px;
+    height: 193px;
+    padding: 52px;
+    text-align: center;
+    border: none;
+  }
+}
+
+.modal__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 38.5px;
+}
+
+.modal__close {
+  @include indents-none;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+
+  &:hover,
+  &:focus {
+    transform: rotate(90deg);
+  }
+}
+
+.modal__window--pop-up .modal__close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.modal__form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 1px;
+}
+
+.modal__title {
+  @include indents-none;
+  @include font-weight($medium);
+  margin-bottom: 12px;
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.modal__message {
+  @include indents-none;
+  line-height: 22px;
+  color: $label-text;
+}
+
+@media (max-width: $max-tablet-width) {
+
+  .modal__window {
+    width: 678px;
+    height: 493px;
+    padding: 55px 83px;
+
+    &--pop-up {
+      height: 193px;
+      padding: 52px 155px;
+    }
+  }
+
+  .modal__window--pop-up .modal__close {
+    top: 29px;
+    right: 29px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+
+  .modal__window {
+    width: 290px;
+    height: 455px;
+    padding: 45px 10px;
+
+    &--pop-up {
+      height: 198px;
+      padding: 34px 26px;
+    }
+  }
+
+  .modal__header {
+    margin-bottom: 29px;
+  }
+
+  .modal__window--pop-up .modal__close {
+    top: 14px;
+    right: 9px;
+  }
+
+  .modal__form {
+    padding: 0 6px;
+  }
+
+  .modal__title {
+    margin-bottom: 14px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
